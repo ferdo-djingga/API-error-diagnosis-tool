@@ -1,0 +1,33 @@
+[
+  {
+    "name": "OK — GitHub API rate limit",
+    "method": "GET",
+    "url": "https://api.github.com/rate_limit",
+    "expectedStatus": 200,
+    "headers": { "Accept": "application/vnd.github+json" }
+  },
+  {
+    "name": "Client Error — Bad request",
+    "method": "GET",
+    "url": "https://httpbin.org/status/400",
+    "expectedStatus": 400
+  },
+  {
+    "name": "Server Error — 500",
+    "method": "GET",
+    "url": "https://httpbin.org/status/500",
+    "expectedStatus": 500
+  },
+  {
+    "name": "Slow response (2s)",
+    "method": "GET",
+    "url": "https://httpbin.org/delay/2",
+    "expectedStatus": 200
+  },
+  {
+    "name": "DNS failure (invalid host)",
+    "method": "GET",
+    "url": "https://nonexistent.example.invalid",
+    "expectedStatus": 200
+  }
+]

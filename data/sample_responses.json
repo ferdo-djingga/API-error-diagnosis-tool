@@ -1,0 +1,24 @@
+{
+  "examples": [
+    {
+      "status": 400,
+      "body": { "error": "invalid parameter 'id'", "code": "BAD_REQUEST" },
+      "note": "4xx often suggests payload/params validation; fix request shape."
+    },
+    {
+      "status": 401,
+      "body": { "error": "token expired" },
+      "note": "Auth issues: rotate tokens, verify scopes and time skew."
+    },
+    {
+      "status": 429,
+      "body": { "error": "rate limit exceeded", "retry_after": 10 },
+      "note": "Add backoff + jitter; request higher limits if needed."
+    },
+    {
+      "status": 500,
+      "body": { "error": "internal server error", "trace_id": "abc123" },
+      "note": "Check logs by trace ID; examine DB/queue/upstream dependencies."
+    }
+  ]
+}

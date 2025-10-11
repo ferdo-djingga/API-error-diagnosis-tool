@@ -1,0 +1,31 @@
+{
+  "name": "api-error-diagnosis-and-monitoring-tool",
+  "version": "1.0.0",
+  "description": "A lightweight Node.js CLI that probes API endpoints, diagnoses common failures (timeouts, DNS, 4xx/5xx, rate limits), and exports CSV + HTML reports.",
+  "main": "src/main.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "diag": "node src/main.js --config config/test_endpoints.json --concurrency 5 --retries 1 --timeout 8000",
+    "test": "jest"
+  },
+  "keywords": [
+    "API",
+    "diagnosis",
+    "monitoring",
+    "error handling",
+    "Node.js",
+    "CLI",
+    "CSV",
+    "HTML",
+    "Jest"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
