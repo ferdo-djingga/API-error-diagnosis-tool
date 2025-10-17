@@ -15,24 +15,6 @@ A lightweight Node.js CLI that **probes API endpoints**, **diagnoses common fail
 
 ---
 
-## Project Structure
-API-Error-Diagnosis-and-Monitoring-Tool/
-  ├─ src/
-  │   ├─ main.js           # CLI in Node.js
-  │   └─ reporters.js      # formats output
-  ├─ config/
-  │   └─ test_endpoints.json  # fake API URLs
-  ├─ data/
-  │   └─ sample_responses.json
-  ├─ output/
-  │   ├─ report.csv
-  │   └─ report.html
-  ├─ tests/
-  │   └─ test_endpoints.test.js
-  ├─ README.md
-  └─ benchmark.md
-___
-
 ## Project Instructions
 
 ### 1) Requirements
